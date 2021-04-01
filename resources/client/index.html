@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/maze.css">
+    <script src="js/maze.js"></script>
+</head>
+<body>
+
+
+<link rel="stylesheet" type="text/css" href="/mazing.css">
+
+<div id="maze_container"><!-- --></div>
+
+<script src="js/maze-builder.js"></script>
+<script src="js/fancy-maze-builder.js"></script>
+<script src="js/maze.js"></script>
+<script>
+
+    let Maze, MazeGame;
+
+    const makeMaze = (id, width, height, speech = false) => {
+        Maze = new FancyMazeBuilder(width, height);
+        Maze.display(id);
+        MazeGame = new Mazing("maze");
+        if(speech) {
+            MazeGame.enableSpeech();
+        }
+    }
+
+    // defines the dimensions of the maze
+    makeMaze("maze_container", 12, 12);
+
+</script>
+</body>
+</html>
