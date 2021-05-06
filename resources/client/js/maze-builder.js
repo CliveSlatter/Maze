@@ -80,9 +80,12 @@ class MazeBuilder {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
+        console.log(array);
         return array;
     }
 
+
+    // splits the grid up into smaller parts
     partition(r1, r2, c1, c2) {
         // create partition walls
         // ref: https://en.wikipedia.org/wiki/Maze_generation_algorithm#Recursive_division_method

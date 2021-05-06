@@ -23,8 +23,10 @@ function Mazing(id) {
 
     this.heroScore = this.mazeContainer.getAttribute("data-steps") - 2;
 
+    // Initialises values for the game
     this.maze = [];
     this.heroPos = {};
+    this.monsterPos = {};
     this.heroHasKey = false;
     this.childMode = false;
 
